@@ -11,8 +11,10 @@
 
 #define POSIX_SPAWN_DISABLE_ASLR 0x0100
 #define POSIX_SPAWN_ALLOW_DATA_EXEC 0x2000 //unused?
+#define PLATFORM_IOS 2
 
 extern char **environ;
+extern int posix_spawnattr_set_platform_np; //for use at your discretion
 
 bool assert_perror(int val, char* fn) {
     if (val != 0) {
