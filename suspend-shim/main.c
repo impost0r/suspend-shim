@@ -11,7 +11,6 @@
 
 #define POSIX_SPAWN_DISABLE_ASLR 0x0100
 #define POSIX_SPAWN_ALLOW_DATA_EXEC 0x2000 //unused?
-#define PLATFORM_IOS 2
 
 extern char **environ;
 extern int posix_spawnattr_set_platform_np; //for use at your discretion
@@ -45,7 +44,9 @@ int main(int argc, char* argv[]) {
     if ( assert_perror(rv, "posix_spawn") != true) {
         exit(EXIT_FAILURE);
     }
-    printf("Spawned %s (PID: %d)", argv[1], pid);
+    printf("Spawned %s (PID: %d), pausing", argv[1], pid);
+    
+    pause();
 
 
 }

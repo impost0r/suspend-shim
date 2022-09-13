@@ -25,6 +25,7 @@
 /* Begin PBXFileReference section */
 		56AA851728D0B62400D8CD3F /* suspend-shim */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "suspend-shim"; sourceTree = BUILT_PRODUCTS_DIR; };
 		56AA851A28D0B62400D8CD3F /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		56AA852128D0CD9C00D8CD3F /* suspend-shim.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "suspend-shim.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +58,7 @@
 		56AA851928D0B62400D8CD3F /* suspend-shim */ = {
 			isa = PBXGroup;
 			children = (
+				56AA852128D0CD9C00D8CD3F /* suspend-shim.entitlements */,
 				56AA851A28D0B62400D8CD3F /* main.c */,
 			);
 			path = "suspend-shim";
@@ -238,6 +240,7 @@
 		56AA851F28D0B62400D8CD3F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "suspend-shim/suspend-shim.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HZC9GAM648;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -248,6 +251,7 @@
 		56AA852028D0B62400D8CD3F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "suspend-shim/suspend-shim.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HZC9GAM648;
 				ENABLE_HARDENED_RUNTIME = YES;
